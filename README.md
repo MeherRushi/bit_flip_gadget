@@ -1,47 +1,36 @@
-# egress tcp drop
+# bit flip drop
 
-Drop egress TCP packets based on <desitnation IP, port number> pair
+description
 
 ## How to use
 
 - Clone the repositoty and change directory inside the project
 ```bash
-$ git clone https://github.com/MeherRushi/egress_tcp_drop_gadget.git
-$ cd egress_tcp_drop_gadget/
+$ git clone https://github.com/MeherRushi/bit_flip_gadget.git
+$ cd 
 ```
 
 - Build the image after setting the experimental tag
 ```bash
-$ export IG_EXPERIMENTAL=true
-$ sudo -E ig image build -t tcp_pkt_dropper .
+$ sudo ig image build -t  .
 ```
 
 - Run the image
 ```bash
-$ sudo -E ig run ghcr.io/inspektor-gadget/gadget/tcp_pkt_dropper:latest --public-keys=""
+$ sudo 
 ```
 
 ## Working
 
-This program drops all the TCP packets at the tc hookpoint, given the IPv4 address. If not mentioned, all the packets will be dropped.
-
-We also track the number of the packets dropped per <desitnation IP, port number> pair
+yada
 
 ## Approach
 
-I actually faced a little bit of an issue trying to take the IP address as a string/array or in the natural format (such as 127.0.0.1 or 2001:db8:: ), but I kept on running into marshalling errors of the parameters.
-
-So temporarily I thought of taking IPv4 address and port using flags --a,--b,--c,--d,--p as described in the [flag section](#flags).
+ytada
 
 ## Future Work
 
 - improve the input flags format
-
-- extend the input to IPv6 as well
-
-- Can definetly decouple the IP address and Port Number while comparision.
-
-- Can look into the filtering based on container mount id as well
 
 
 ## Flags
