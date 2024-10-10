@@ -1,0 +1,24 @@
+name: bit_flip
+description: bit_flip
+homepageURL: http://bit_flip.com
+documentationURL: http://bit_flip.com/docs
+sourceURL: https://github.com/my-org/bit_flip/
+datasources:
+  events_map:
+    annotations:
+      events_map.collect: "true"
+    fields: {}
+  events_map_iter:
+    fields:
+      drop_cnt:
+        annotations:
+          description: 'TODO: Fill field description'
+      dst:
+        annotations:
+          description: 'TODO: Fill field description'
+      src:
+        annotations:
+          description: 'TODO: Fill field description'
+      timestamp_raw:
+        annotations:
+          description: 'TODO: Fill field description'
