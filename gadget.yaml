@@ -14,10 +14,6 @@ datasources:
         annotations:
           description: Process name
           template: comm
-      flip_cnt:
-        annotations:
-          description: The number of packets flipped per target address, port
-            pair
       dst:
         annotations:
           description: Destination endpoint
@@ -26,6 +22,9 @@ datasources:
         annotations:
           description: A boolean parameter to indicate whether the program is attached
             at the egress hookpoint or not
+      flip_cnt:
+        annotations:
+          description: The number of packets flipped per target address, port pair
       gid:
         annotations:
           columns.hidden: "true"
@@ -92,6 +91,10 @@ params:
       defaultValue: "true"
       description: This is a boolean parameter to decide whether UDP packets should
         be filtered or not
+    flip_percentage:
+      key: flip_percentage
+      defaultValue: "100"
+      description: This is the percentage of packets to be flipped (Eg:- 100)
     ingress:
       key: ingress
       defaultValue: "false"
@@ -100,15 +103,13 @@ params:
     ipaddr_v4_filter:
       key: ipaddr_v4_filter
       defaultValue: "0"
-      description: This is a string parameter of IPv4 that gets converted to a uint32 in the kernel space
+      description: This is a string parameter of IPv4 that gets converted to a uint32
+        in the kernel space
     ipaddr_v6_filter:
       key: ipaddr_v6_filter
-      defaultValue: "::"
-      description: This is a string parameter of IPv6 that gets converted to a struct uint128 of 2 u64 members in the kernel space
-    flip_percentage:
-      key: flip_percentage
-      defaultValue: "100"
-      description: This is the percentage of packets to be flipped (Eg:- 100)
+      defaultValue: '::'
+      description: This is a string parameter of IPv6 that gets converted to a struct
+        uint128 of 2 u64 members in the kernel space
     port:
       key: port
       defaultValue: "0"

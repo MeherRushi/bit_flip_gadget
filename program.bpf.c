@@ -25,7 +25,6 @@ vmlinux.h */
 #define TC_ACT_REDIRECT		7
 
 #include <stdbool.h>
-#include <string.h>
 
 #include <bpf/bpf_helpers.h>
 #include <bpf/bpf_core_read.h>

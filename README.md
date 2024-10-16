@@ -1,5 +1,7 @@
-# bit_flip_gadget
+# chaos_bit_flip
 
-Use uprobe to trace pthread_mutex_lock and pthread_mutex_unlock in libc.so and detect potential deadlocks.
+This gadget is used to simulate the random bit flips on packets in the network based on independent (Bernoulli) probability model for random TCP/UDP packets. The program runs at the tc hook point and can be configured to run at ingress/egress and for TCP/UDP packets and the flip probability percentage can also be configured. We can also flip packets of a specific IP/port number.
 
-Check the full documentation on https://inspektor-gadget.io/docs/latest/gadgets/deadlock
+Currently, the gadget only flips one random bit. To be extended to flip more than one bit.
+
+Check the full documentation on https://inspektor-gadget.io/docs/latest/gadgets/chaos_bit_flip
