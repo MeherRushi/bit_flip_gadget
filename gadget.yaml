@@ -10,15 +10,87 @@ datasources:
     fields: {}
   events_map_iter:
     fields:
+      comm:
+        annotations:
+          description: 'TODO: Fill field description'
       drop_cnt:
         annotations:
           description: 'TODO: Fill field description'
       dst:
         annotations:
           description: 'TODO: Fill field description'
+      egress:
+        annotations:
+          description: 'TODO: Fill field description'
+      flip_cnt:
+        annotations:
+          description: 'TODO: Fill field description'
+      gid:
+        annotations:
+          description: 'TODO: Fill field description'
+      ingress:
+        annotations:
+          description: 'TODO: Fill field description'
+      mntns_id:
+        annotations:
+          description: 'TODO: Fill field description'
+      netns_id:
+        annotations:
+          description: 'TODO: Fill field description'
+      pcomm:
+        annotations:
+          description: 'TODO: Fill field description'
+      pid:
+        annotations:
+          description: 'TODO: Fill field description'
+      ppid:
+        annotations:
+          description: 'TODO: Fill field description'
       src:
+        annotations:
+          description: 'TODO: Fill field description'
+      tid:
         annotations:
           description: 'TODO: Fill field description'
       timestamp_raw:
         annotations:
           description: 'TODO: Fill field description'
+      uid:
+        annotations:
+          description: 'TODO: Fill field description'
+params:
+  ebpf:
+    egress:
+      key: egress
+      defaultValue: ""
+      description: 'TODO: Fill parameter description'
+    filter_tcp:
+      key: filter_tcp
+      defaultValue: ""
+      description: 'TODO: Fill parameter description'
+    filter_udp:
+      key: filter_udp
+      defaultValue: ""
+      description: 'TODO: Fill parameter description'
+    flip_percentage:
+      key: flip_percentage
+      defaultValue: ""
+      description: 'TODO: Fill parameter description'
+    ingress:
+      key: ingress
+      defaultValue: ""
+      description: 'TODO: Fill parameter description'
+    ipaddr_v4_filter:
+      key: ipaddr_v4_filter
+      defaultValue: "0"
+      description: This is a string parameter of IPv4 that gets converted to a uint32
+        in the kernel space
+    ipaddr_v6_filter:
+      key: ipaddr_v6_filter
+      defaultValue: '::'
+      description: This is a string parameter of IPv6 that gets converted to a struct
+        uint128 of 2 u64 members in the kernel space
+    port:
+      key: port
+      defaultValue: ""
+      description: 'TODO: Fill parameter description'
