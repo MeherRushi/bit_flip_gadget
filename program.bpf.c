@@ -145,7 +145,7 @@ static int rand_bit_flip_map_update(struct event *event, struct events_map_key *
                                     __u32 *data_len)
 {
 	__u32 rand_num = bpf_get_prandom_u32();									// Get a random 32-bit unsigned integer
-    // Set the threshold using the loss_percentage
+    // Set the threshold using the flip_percentage
     volatile __u64 threshold = (volatile __u64)(
 								(volatile __u64)flip_percentage 
 								* (__u64)0xFFFFFFFF
